@@ -1,22 +1,16 @@
 const express = require('express');
 const app = express();
-const ip = require('ip');
 
-  console.log(ip.address());
-
+app.use(require("./lib/logger.js"))
 
 app.get('/',function (req, res) {
     res.send('hello world');
   });
-
-  app.get('/err',function (req, res) {
-    console.log("err");
-
+app.get('/err',function (req, res) {
     res.send('err');
-  });
-  app.get('/info',function (req, res) {
-    console.log("info");
+});
+app.get('/info',function (req, res) {
     res.send('info');
-  });
+});
   
-app.listen(3000)
+app.listen(40000)
