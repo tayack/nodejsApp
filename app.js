@@ -13,4 +13,4 @@ app.get('/info',function (req, res) {
     res.send('info');
 });
   
-app.listen(40000)
+app.listen(8080)
